@@ -128,6 +128,10 @@ app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
 
 
+app.get("/", (req, res) => {
+  res.send(" Major Project is live and working!");
+});
+
 app.use((err, req, res, next) => {
     let{statusCode=500,message="something went wrong "}=err;
     res.status(statusCode).render("error.ejs",{message});
