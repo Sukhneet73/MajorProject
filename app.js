@@ -149,7 +149,11 @@ app.listen(8080, () => {
 });
 
 
-app.get('/', (req, res) => {
-  res.send('Server is working!');
+app.get('/', async (req, res) => {
+  // You probably fetch `allListings` from your database
+  // Example:
+  // const allListings = await Listing.find({});
+  res.render('index', { allListings });
 });
+
 
