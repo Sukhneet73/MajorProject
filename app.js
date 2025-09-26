@@ -148,3 +148,8 @@ app.listen(8080, () => {
   console.log("server is listening to port 8080");
 });
 
+
+app.get('/', (req, res) => {
+  res.send('Server is working!');
+});
+
